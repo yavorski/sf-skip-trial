@@ -1,0 +1,14 @@
+{
+  "name": "sf-skip-trial-screen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Skip sitefinity cms trial screen",
+  "keywords": [ "Skip", "sitefinity", "cms", "trial", "screen" ],
+  "author": "yavorski",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf extension && rm -rf extension.zip",
+    "zip": "mkdir -p extension && cp src/main.js src/manifest.json extension/ && cp -r icons/ extension/icons && (cd extension && zip -r ../extension.zip .)",
+    "build": "npm run clean && npm run zip"
+  }
+}
